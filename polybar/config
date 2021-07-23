@@ -102,7 +102,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow spotify1
 modules-center = uptime date filesystem
-modules-right = memory3 cpu2 xkeyboard
+modules-right = variety memory3 cpu2 xkeyboard
 
 tray-detached = false
 tray-offset-x = 0
@@ -392,20 +392,6 @@ format-unmounted-background = ${colors.background}
 
 ################################################################################
 
-[module/kernel]
-type = custom/script
-exec = uname -r
-tail = false
-interval = 1024
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #0084FF
-format-underline = #0084FF
-
-################################################################################
-
 [module/jgmenu]
 type = custom/script
 interval = 120
@@ -455,41 +441,6 @@ format-underline = #3384d0
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
-################################################################################
-
-[module/networkspeedup]
-;https://github.com/jaagr/polybar/wiki/Module:-network
-type = internal/network
-;interface = wlp3s0
-;interface = enp14s0
-interface = enp0s31f6
-;interface = enp4s0
-label-connected = "%upspeed:7%"
-format-connected = <label-connected>
-format-connected-prefix = ""
-format-connected-prefix-foreground = #FE522C
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
-;format-connected-underline = #62FF00
-
-################################################################################
-
-[module/networkspeeddown]
-;https://github.com/jaagr/polybar/wiki/Module:-network
-type = internal/network
-;interface = wlp3s0
-;interface = enp14s0
-interface = enp0s31f6
-;interface = enp4s0
-label-connected = "%downspeed:7%"
-format-connected = <label-connected>
-format-connected-prefix = ""
-format-connected-prefix-foreground = #3EC13F
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
-;format-connected-underline = #62FF00
-
 ################################################################################
 
 [module/pacman-updates]
@@ -536,44 +487,6 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 
-
-################################################################################
-
-[module/pub-ip]
-;https://linuxconfig.org/polybar-a-better-wm-panel-for-your-linux-system
-type = custom/script
-exec = ~/.config/polybar/scripts/pub-ip.sh
-interval = 100
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-underline = #FFBB00
-label = %output%
-format-prefix = "  "
-format-prefix-foreground = #FFBB00
-
-################################################################################
-
-[module/release]
-type = custom/script
-exec = (lsb_release -d | awk {'print $2'} ;echo " "; lsb_release -r | awk {'print $2'}) | tr -d '\n'
-interval = 6000
-
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = "  "
-format-prefix-foreground = #62FF00
-format-underline = #62FF00
-
-################################################################################
-
-[module/sep]
-; alternative separator
-type = custom/text
-content = 
-content-foreground = ${colors.foreground}
-content-background =  ${colors.background}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
 
 ################################################################################
 
@@ -651,22 +564,6 @@ format-underline = #C15D3E
 
 ################################################################################
 
-[module/variety]
-type = custom/script
-exec = echo " Variety"
-;exec = echo " "
-interval = 1
-tail = true
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = ""
-format-prefix-foreground = #FFFFF
-format-underline = #0084FF
-click-right = variety --preferences
-click-left = variety --selector
-
-################################################################################
-
 [module/volume]
 ;https://github.com/jaagr/polybar/wiki/Module:-volume
 type = internal/volume
@@ -698,20 +595,6 @@ format-muted-prefix = "  "
 format-muted-prefix-foreground = "#ff0000"
 format-muted-foreground = ${colors.foreground}
 format-muted-background = ${colors.background}
-
-################################################################################
-
-[module/weather]
-type = custom/script
-interval = 10
-format = <label>
-format-prefix = " "
-format-prefix-foreground = #3EC13F
-format-underline = #3EC13F
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-exec = python -u ~/.config/polybar/scripts/weather.py
-tail = true
 
 #################################################################################
 
