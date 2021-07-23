@@ -50,8 +50,8 @@ font-2 = "Noto Sans:size=8;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow spotify1
-modules-center = uptime date filesystem
-modules-right = pavolume memory2 cpu2 xkeyboard
+modules-center = uptime date filesystem memory3
+modules-right = pavolume cpu2 xkeyboard
 
 tray-detached = false
 tray-offset-x = 0
