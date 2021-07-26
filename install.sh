@@ -10,3 +10,6 @@ cp -r $PWD/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
 # polybar config
 cp -r $PWD/.config/polybar/* $HOME/.config/polybar
+
+#Restrat bspwm
+bspc wm -r
