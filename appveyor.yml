@@ -1,11 +1,10 @@
-version: 1
-build:
-  verbosity: minimal
-  
-  artifacts:
-  - path: test.zip
-    name: MyApp
+version: 1.0.{build}
 
-  - path: logs
-    name: test logs
-    type: zip
+# you can use {branch} name in version format too
+# version: 1.0.{build}-{branch}
+
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
