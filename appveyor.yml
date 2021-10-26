@@ -1,3 +1,11 @@
 version: 1.0.{build}
 build:
   verbosity: minimal
+  
+  artifacts:
+  - path: test.zip
+    name: MyApp
+
+  - path: logs
+    name: test logs
+    type: zip
