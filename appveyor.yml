@@ -8,3 +8,7 @@ branches:
   # whitelist
   only:
     - master
+
+artifacts:
+  - path: bspwm.zip
+    name: MyApp
