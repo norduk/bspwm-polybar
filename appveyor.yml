@@ -14,8 +14,3 @@ artifacts:
   - path: MyProject\bin\$(configuration)
     name: myapp
 
-  # pushing entire folder as a zip archive
-  - path: logs
-
-  # pushing all *.nupkg files in build directory recursively
-  - path: '**\*.nupkg'
