@@ -3,13 +3,13 @@
 echo "Copying configurations..."
 
 # bspwm config
-cp -r $PWD/.config/bspwm/ $HOME/.config/bspwm/
+cp -r $HOME/bspwm-polybar/bspwm/ $HOME/.config/bspwm/
 
 # sxhkd config
-cp -r $PWD/.config/bspwm/sxhkd/sxhkdrc $HOME/.config/bspwm/sxhkd/sxhkdrc
+cp -r $HOME/bspwm-polybar/bspwm/sxhkd/sxhkdrc $HOME/.config/bspwm/sxhkd/sxhkdrc
 
 # polybar config
-cp -r $PWD/.config/polybar/* $HOME/.config/polybar
+cp -r $HOME/bspwm-polybar/polybar/* $HOME/.config/polybar
 
 #Restrat bspwm
-bspc wm -r
+#bspc wm -r
